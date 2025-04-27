@@ -1,0 +1,10 @@
+title: Il mio sito personale
+description: "Benvenuto sul mio portfolio realizzato con Jekyll e Markdown"
+theme: minima
+
+markdown: kramdown
+permalink: /:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
