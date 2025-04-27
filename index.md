@@ -3,10 +3,9 @@ layout: home
 title: Home
 ---
 
-# Ciao, sono Antonio!
+# Hi!
 
-Benvenuto sul mio sito personale. Qui trovi i miei progetti, il mio blog e i contatti.
+Welcome to my personal website.
 
 - 🎯 **Progetto 1**: Descrizione breve…
 - 🚀 **Progetto 2**: Descrizione breve…
-
