@@ -1,0 +1,32 @@
+---
+---
+
+@import "minima";
+
+$blue: #0072BD;
+$orange: #D95319;
+$yellow: #EDB120;
+$violet: #7E2F8E;
+$green: #77AC30;
+$darkgray: #262626;
+$gray: #808080;
+$white: #fafafa;
+
+body {
+  background-color: $white;
+  color: $darkgray;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  color: $darkgray;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $orange;
+}
