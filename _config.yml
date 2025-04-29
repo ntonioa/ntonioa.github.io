@@ -26,6 +26,7 @@ url: https://ntonioa.github.io
 github_username: ntonioa
 instagram_username: ntonioa
 linkedin_username: ntonioa
+twitter_username: ntonioa_
 youtube_username: "@ntonioa"
 markdown: kramdown
 permalink: /:title/
@@ -37,13 +38,6 @@ plugins:
 sass:
   sass_dir: assets
   style: compressed
-minima:
-  skin: auto
-  nav_pages:
-    - index.md
-    - about.md
-    - portfolio.md
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
