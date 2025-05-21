@@ -40,19 +40,19 @@ nav_pages:
     slug: projects
 social_links:
   - name: email
-    url: mailto:you@example.com
+    url: mailto:a.rapuano1999@gmail.com
     icon: fas fa-envelope
   - name: github
     url: https://github.com/ntonioa
     icon: fab fa-github
   - name: instagram
-    url: https://instagram.com/yourhandle
+    url: https://instagram.com/ntonioa
     icon: fab fa-instagram
   - name: linkedin
-    url: https://linkedin.com/in/yourprofile
+    url: https://linkedin.com/in/ntonioa
     icon: fab fa-linkedin
   - name: youtube
-    url: https://youtube.com/yourchannel
+    url: https://youtube.com/@ntonioa
     icon: fab fa-youtube
 markdown: kramdown
 permalink: /:title/
