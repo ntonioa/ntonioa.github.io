@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 🏠home
+title: home
 order: 1
 ---
 

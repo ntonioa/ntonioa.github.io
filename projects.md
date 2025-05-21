@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🛠️projects
+title: projects
 permalink: /projects/
 order: 3
 ---
