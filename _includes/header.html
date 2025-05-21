@@ -1,4 +1,4 @@
-<header class="site-header" role="banner">
+<!-- <header class="site-header" role="banner">
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -25,5 +25,42 @@
         </div>
       </nav>
     {%- endif -%}
+  </div>
+</header> -->
+
+<header class="site-header custom-header">
+  <div class="nav-container">
+    <!-- LEFT: dynamic “ntonioa/[slug]” -->
+    <div class="nav-left">
+      <a href="{{ page.url | relative_url }}">
+        ntonioa/{{ page.slug | default: page.title | downcase }}
+      </a>
+    </div>
+
+    <!-- CENTER: optional page links (if you want them) -->
+    <nav class="nav-center">
+      {% for p in site.nav_pages %}
+        <a
+          href="{{ p.url | relative_url }}"
+          class="{% if page.slug == p.slug %}active{% endif %}"
+        >
+          {{ p.title }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <!-- RIGHT: social icons -->
+    <div class="nav-right">
+      {% for link in site.social_links %}
+        <a
+          href="{{ link.url }}"
+          class="social-link"
+          title="{{ link.name | capitalize }}"
+          target="_blank" rel="noopener"
+        >
+          <i class="{{ link.icon }}"></i>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 </header>

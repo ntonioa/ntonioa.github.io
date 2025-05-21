@@ -23,11 +23,37 @@ email: a.rapuano1999@gmail.com
 description: Personal website of Antonio Rapuano.
 domain: ntonioa.github.io
 url: https://ntonioa.github.io
-github_username: ntonioa
-instagram_username: ntonioa
-linkedin_username: ntonioa
-twitter_username: ntonioa_
-youtube_username: "@ntonioa"
+# github_username: ntonioa
+# instagram_username: ntonioa
+# linkedin_username: ntonioa
+# twitter_username: ntonioa_
+# youtube_username: "@ntonioa"
+nav_pages:
+  - title: Home
+    url: /
+    slug: home
+  - title: About
+    url: /about/
+    slug: about
+  - title: Projects
+    url: /projects/
+    slug: projects
+social_links:
+  - name: email
+    url: mailto:you@example.com
+    icon: fas fa-envelope
+  - name: github
+    url: https://github.com/ntonioa
+    icon: fab fa-github
+  - name: instagram
+    url: https://instagram.com/yourhandle
+    icon: fab fa-instagram
+  - name: linkedin
+    url: https://linkedin.com/in/yourprofile
+    icon: fab fa-linkedin
+  - name: youtube
+    url: https://youtube.com/yourchannel
+    icon: fab fa-youtube
 markdown: kramdown
 permalink: /:title/
 theme: minima

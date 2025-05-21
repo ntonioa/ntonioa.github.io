@@ -57,3 +57,33 @@ a.button:hover {
   border: 1.5px solid $lightishgray;
   text-decoration: none !important;
 }
+
+.custom-header {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .nav-left a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+  }
+  .nav-center {
+    @media (max-width: 768px) { display: none; }
+    a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      &.active { text-decoration: underline; }
+    }
+  }
+  .nav-right a {
+    margin-left: 0.75rem;
+    font-size: 1.2rem;
+    transition: transform 0.1s;
+  }
+  .nav-right a:hover {
+    transform: translateY(-2px);
+  }
+}
