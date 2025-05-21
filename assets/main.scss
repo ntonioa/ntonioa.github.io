@@ -197,7 +197,7 @@ a.button:hover {
     flex-direction: row;   // row instead of column
     justify-content: space-around;
     gap: 0;                // spacing is built into the buttons
-    border-radius: 1rem 1rem 0 0;  // rounded top corners
+    border-radius: 0rem 0rem 0 0;  // rounded top corners
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
   }
 
