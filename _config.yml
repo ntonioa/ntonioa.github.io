@@ -55,6 +55,8 @@ social_links:
     url: https://youtube.com/@ntonioa
     icon: fab fa-youtube
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 permalink: /:title/
 theme: minima
 plugins:

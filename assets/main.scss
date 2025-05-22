@@ -11,8 +11,8 @@ $green: #77AC30;
 $darkgray: #262626;
 $darkergray: #1A1A1A;
 $gray: #808080;
-$lightishgray: #D0D0D0;
-$lightgray: #F0F0F0;
+$lightishgray: #BFBFBF;
+$lightgray: #D0D0D0;
 $lightergray: #F5F5F5;
 $white: #fafafa;
 
@@ -150,6 +150,12 @@ a.button:hover {
     text-decoration: none;
     color: $lightergray !important;
     transition: color 0.2s, background 0.2s, transform 0.1s;
+
+      &.active {
+    background: lighten($gray, 80%);        // highlight background
+    color:      $darkgray !important;      // inverted text/icon color
+    transform:  none;                // no lift
+  }
   }
 
   .sidebar-btn:hover {
@@ -170,6 +176,11 @@ a.button:hover {
 }
 
 .content-box {
+    /* space between multiple boxes */
+  .content-box + .content-box {
+    margin-top: 2rem;
+  }
+
   background: $darkergray;
   color: $lightgray;
   padding: 2rem;                    // inner breathing room
@@ -183,6 +194,16 @@ a.button:hover {
   margin-top: 1.5rem;
   margin-left: calc(var(--sidebar-offset) + 10rem);
   margin-right: var(--sidebar-offset);
+
+  text-align: justify;
+  text-justify: inter-word;
+  // hyphens: auto;
+}
+
+.content-box h1,
+.content-box h2,
+.content-box h3 {
+  text-align: left;
 }
 
 // ==== Mobile: horizontal bottom nav ====

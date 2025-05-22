@@ -4,6 +4,7 @@ title: home
 order: 1
 ---
 
+<section class="content-box">
 # Hey, I'm Antonio
 
 I'm a [Control Engineering](https://corsidilaurea.uniroma1.it/en/corso/2022/29933/home) 
@@ -15,3 +16,4 @@ Feel free to explore the [🙋🏻about](/about) and [🛠️projects](/projects
 or take a look at:
 
 <a href="/assets/cv_antonio_rapuano.pdf" class="button">📄my résumé (PDF)</a>
+</section>
