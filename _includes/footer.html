@@ -1,35 +1,24 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
+<footer class="site-footer">
   <div class="wrapper">
+    <p class="footer-copy">
+      &copy; {{ "now" | date: "%Y" }} Antonio Rapuano. All rights reserved.
+    </p>
 
-    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
+    <p class="footer-nav">
+      <a href="{{ "/" | relative_url }}">Home</a> • 
+      <a href="{{ "/about/" | relative_url }}">About</a> • 
+      <a href="{{ "/projects/" | relative_url }}">Projects</a> • 
+      <a href="{{ "/assets/cv_antonio_rapuano.pdf" | relative_url }}" target="_blank">Resume</a>
+    </p>
 
-    <!-- <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
+    <p class="footer-built">
+      Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & 
+      <a href="https://github.com/jekyll/minima" target="_blank">Minima</a>.
+    </p>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div> -->
-
+    <p class="footer-legal">
+      <a href="/privacy/">Privacy Policy</a> • 
+      <a href="/terms/">Terms of Use</a>
+    </p>
   </div>
-
 </footer>

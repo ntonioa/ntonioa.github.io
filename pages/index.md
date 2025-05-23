@@ -1,6 +1,7 @@
 ---
 layout: home
 title: home
+permalink: /
 order: 1
 ---
 

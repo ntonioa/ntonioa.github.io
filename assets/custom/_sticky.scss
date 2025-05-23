@@ -1,0 +1,18 @@
+@media (min-width: 769px) {
+  .body-wrapper {
+    display:      flex;
+    align-items:  flex-start;
+    padding-bottom: var(--sidebar-footer-gap);
+  }
+
+  .sidebar {
+    position:   sticky;
+    top:        2.6em;
+    margin-top: 2.6em;
+    bottom:     var(--sidebar-footer-gap);
+  }
+
+  .content-box {
+    margin-left: calc(var(--sidebar-offset) + 4rem);
+  }
+}

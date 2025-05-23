@@ -1,0 +1,45 @@
+body {
+  background-color: $darkgray;
+  color:            $gray;
+  font-family:      'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  color: $lightergray;
+}
+
+a {
+  color:           $blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $orange;
+}
+
+a.button {
+  background-color: $white;
+  border:           1.5px;
+  color:            $darkgray;
+  padding:          2px 2px;
+  text-align:       center;
+  display:          inline-block;
+  font-size:        16px;
+  margin:           4px 2px;
+  cursor:           pointer;
+  border-radius:    4px;
+  transition:       all 0.1s ease;
+  font-weight:      500;
+}
+
+a.button:hover {
+  background-color: $lightishgray;
+  color:            $darkgray;
+  border:           0px solid $darkgray;
+  transform:        translateY(-2px);
+  text-decoration:  none !important;
+}
+
+.page-content {
+  padding-right: var(--sidebar-offset);
+}
