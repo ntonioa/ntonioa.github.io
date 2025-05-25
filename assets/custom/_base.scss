@@ -43,3 +43,30 @@ a.button:hover {
 .page-content {
   padding-right: var(--sidebar-offset);
 }
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222; /* made opaque */
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000; /* raised to ensure visibility */
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
