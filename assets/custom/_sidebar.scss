@@ -1,51 +1,52 @@
 .sidebar {
-  position:        fixed;
-  top:             6rem;
-  left:            var(--sidebar-offset);
-  width:           5rem;
-  padding:         1rem;
-  gap:             1rem;
-  display:         flex;
-  flex-direction:  column;
-  background:      $darkergray;
-  border-radius:   1rem;
-  box-shadow:      $darkergray;
-  z-index:         1000;
+  position: fixed;
+  top: 6rem;
+  left: var(--sidebar-offset);
+  width: 5rem;
+  padding: 0rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: $darkergray;
+  border-radius: 1rem;
+  box-shadow: $darkergray;
+  z-index: 1000;
 
   .sidebar-btn {
-    display:          flex;
-    flex-direction:   column;
-    align-items:      center;
-    justify-content:  center;
-    width:            100%;
-    height:           4rem;
-    background:       $darkgray;
-    border:           1px solid $darkgray;
-    border-radius:    0.5rem;
-    margin:           0.5rem 0;
-    text-decoration:  none;
-    color:            $lightergray !important;
-    transition:       color 0.2s, background 0.2s, transform 0.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1rem;
+    background: $darkgray;
+    border: 1px solid $darkgray;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: $lightergray !important;
+    transition: color 0.2s, background 0.2s, transform 0.1s;
+
     &.active {
       background: lighten($gray, 80%);
-      color:      $darkgray !important;
-      transform:  none;
+      color: $darkgray !important;
+      transform: none;
     }
   }
 
   .sidebar-btn:hover {
-    color:      $darkgray !important;
+    color: $darkgray !important;
     background: lighten($gray, 80%);
-    transform:  translateY(-2px);
+    transform: translateY(-2px);
   }
 
   .icon {
-    font-size:  1.7rem;
+    font-size: 1.7rem;
     margin-top: 0.25rem;
   }
 
   .label {
-    font-size:  1rem;
+    font-size: 1rem;
     margin-top: 0.25rem;
   }
 }
