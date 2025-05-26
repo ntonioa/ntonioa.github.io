@@ -68,9 +68,32 @@
     align-items: space-around !important;
   }
 
-  .project-box-left,
-  .project-box-center {
-    width: 100%;
+  .project-box-assets{
+    flex-direction: row !important;
+    gap: 0.6rem !important;
+  }
+
+  // .project-box-assets .video-thumb{
+  //   flex: 0 0 45%;
+  //   max-width: 140px;
+  //   margin: 0;
+  // }
+
+  .button.slim {
+    padding: 1.8rem 0.3rem !important;
+  }
+
+  .project-box-assets .project-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 !important;
+    height: 100% !important;
+    gap: 0.5rem;
+  }
+
+  .project-box-assets .button{
+    margin: 0;
   }
 
   .custom-header .nav-container {

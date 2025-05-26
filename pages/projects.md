@@ -5,9 +5,9 @@ permalink: /projects/
 order: 3
 ---
 
-<section class="content-box" markdown="1">
+<section class="content-box" markdown="0">
 
-### Graduation theses
+<h3> Graduation theses </h3>
 {% capture theses %}
 {% include theses.html %} 
 {% endcapture %}
@@ -15,9 +15,9 @@ order: 3
 
 </section>
 
-<section class="content-box" markdown="1">
+<section class="content-box" markdown="0">
 
-### Academic projects
+<h3> Academic projects </h3>
 {% capture projects-acad %}
 {% include projects-acad.html %} 
 {% endcapture %}
@@ -25,9 +25,9 @@ order: 3
 
 </section>
 
-<section class="content-box">
+<section class="content-box" markdown="0">
 
-### Personal/extracurricular projects
+<h3> Personal/extracurricular projects </h3>
 {% capture projects-pers %}
 {% include projects-pers.html %} 
 {% endcapture %}

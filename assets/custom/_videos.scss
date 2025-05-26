@@ -1,0 +1,88 @@
+.video-thumb {
+  position: relative;
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: $darkgray;
+  opacity: 0.7;
+  mask: url('/assets/images/play.svg') center / 80% no-repeat;
+  -webkit-mask: url('/assets/images/play.svg') center / 80% no-repeat;
+  border-radius: 50%;
+  transition: background .2s;
+  pointer-events: none;
+}
+
+.video-thumb:hover .play-btn {
+  background: $white;
+}
+
+#video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#video-overlay iframe {
+  width: 90vw;
+  height: 50.625vw;
+  max-height: 90vh;
+}
+
+#video-overlay .close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.video-thumb.placeholder{
+  cursor: default;
+}
+
+.video-thumb.placeholder img{
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  opacity: .45;
+  filter: grayscale(100%);
+}
+
+.video-thumb.placeholder::after{
+  content: "COMING SOON";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: .05em;
+  color: $white;
+  text-shadow: 0 0 4px rgba(0,0,0,.6);
+}
+
+.video-thumb.placeholder .play-btn{
+  display: none;
+}

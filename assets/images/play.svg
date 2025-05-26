@@ -1,0 +1,7 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!-- Simple play-triangle, centred in a square canvas -->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
+  <title id="title">Play button</title>
+  <!-- White = opaque in a CSS mask -->
+  <polygon points="35,25 35,75 75,50" fill="#ffffff"></polygon>
+</svg>
