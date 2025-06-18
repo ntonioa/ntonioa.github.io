@@ -7,7 +7,7 @@ order: 3
 
 <section class="content-box" markdown="0">
 
-<h3> Graduation theses </h3>
+<h3 style="text-align: center"> Graduation theses </h3>
 {% capture theses %}
 {% include theses.html %} 
 {% endcapture %}
@@ -17,7 +17,7 @@ order: 3
 
 <section class="content-box" markdown="0">
 
-<h3> Academic projects </h3>
+<h3 style="text-align: center"> Academic projects </h3>
 {% capture projects-acad %}
 {% include projects-acad.html %} 
 {% endcapture %}
@@ -27,7 +27,7 @@ order: 3
 
 <section class="content-box" markdown="0">
 
-<h3> Personal/extracurricular projects </h3>
+<h3 style="text-align: center"> Personal/extracurricular projects </h3>
 {% capture projects-pers %}
 {% include projects-pers.html %} 
 {% endcapture %}
