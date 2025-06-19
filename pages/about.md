@@ -5,6 +5,14 @@ permalink: /about/
 order: 2
 ---
 
+<section class="content-box">
+<h3 style="text-align: center">In short</h3>
+{% capture in-short %}
+{% include in-short.html %} 
+{% endcapture %}
+{{ in-short | replace: '    ', ''}}
+</section>
+
 <section class="content-box" markdown="0">
 <h3 style="text-align: center"> Experience </h3>
 {% capture experience %}
@@ -35,8 +43,4 @@ order: 2
 {% include languages.html %} 
 {% endcapture %}
 {{ languages | replace: '    ', ''}}
-</section>
-
-<section class="content-box">
-  <h3 style="text-align: center">Other interests</h3>
 </section>

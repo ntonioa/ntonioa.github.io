@@ -46,6 +46,10 @@ a.button:hover {
   padding-right: var(--sidebar-offset);
 }
 
+p{
+  margin: 0;
+}
+
 [data-tooltip] {
   position: relative;
 }

@@ -32,8 +32,9 @@
   text-align: center;
   margin: 10px;
   border-radius: 8px;
-  background: $lightergray;
-  color: $darkgray;
+  background: transparent;
+  color: $lightergray;
+  box-shadow:inset 0px 0px 0px 2.5px $darkergray;
 }
 
 .skill-box p {
