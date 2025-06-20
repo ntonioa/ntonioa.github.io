@@ -1,18 +1,17 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">matlab</span>
       <span class="tag">underactuated robotics</span>
       <span class="tag" data-tooltip="model predictive control">MPC</span>
       <span class="tag" data-tooltip="differential dynamical programming">DDP</span>
+      <span class="tag">matlab</span>
     </div>
-    <h1>Control of underactuated robots under input constraints</h1>
+    <h1>Control of underactuated robots via input-constrained receding-horizon DDP</h1>
     <p>
       <strong>Duration:</strong> Winter 2024 - Fall 2024
     </p>
     <p>
-      Designed a receding-horizon DDP algorithm to perform swing-up motions of the acrobot and pendubot while satisfying
-      hard input constraints.
+      We developed a receding-horizon controller based on DDP to swing up the acrobot and pendubot (two benchmark underactuated robots) enforcing hard input constraints through clamping, squashing, and constrained QP—showing the latter's superior performance. The method combines trajectory optimization with real-time feedback, using regularization to improve convergence.
     </p>
   </div>
   <div class="inner-box-assets">
@@ -32,23 +31,22 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">matlab</span>
       <span class="tag">multi-agent</span>
       <span class="tag" data-tooltip="passivity-based control">PBC</span>
       <span class="tag">consensus</span>
+      <span class="tag">matlab</span>
     </div>
-    <h1>Energy-aware fault-tolerant formation control of a fleet of UAVs</h1>
+    <h1> Fault-tolerant formation control of passive multi-agent systems using energy tanks</h1>
     <p>
       <strong>Duration:</strong> Summer 2024
     </p>
     <p>
-      Implemented a decentralized control strategy based on passivity, energy tanks, and consensus to maintain a desired
-      formation despite faults.
+      I reproduced and validated a fault-tolerant formation control strategy based on passivity, energy tanks, and decentralized consensus. The system includes distributed fault diagnosis, topology reconfiguration, and a passive join mechanism to ensure stability.
     </p>
   </div>
   <div class="inner-box-assets">
     <a class="video-thumb" href="https://youtu.be/RUtw0ZBcuwo" data-video-id="RUtw0ZBcuwo" aria-label="Play video">
-      <img src="https://img.youtube.com/vi/RUtw0ZBcuwo/hqdefault.jpg" alt="CNN car control - demo video">
+      <img src="https://img.youtube.com/vi/RUtw0ZBcuwo/hqdefault.jpg" alt="Fault-tolerant formation PBC - demo video">
       <span class="play-btn" aria-hidden="true"></span>
     </a>
     <div class="project-links">
@@ -63,19 +61,18 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">matlab</span>
+      <span class="tag" data-tooltip="plug-in electric vehicles">pev</span>
       <span class="tag">multi-agent</span>
       <span class="tag">large-scale</span>
       <span class="tag" data-tooltip="model predictive control">mpc</span>
-      <span class="tag" data-tooltip="plug-in electric vehicles">pev</span>
+      <span class="tag">matlab</span>
     </div>
-    <h1>Decentralized control of the charging process of a fleet of electric vehicles</h1>
+    <h1> Decentralized PEV charging control based on a subgradient method for mixed-integer linear programming problems</h1>
     <p>
       <strong>Duration:</strong> Winter 2023 - Spring 2024
     </p>
     <p>
-      Implemented classical and decentralized MPC to schedule optimal charging of a large fleet of plug-in electric
-      vehicles.
+      Building on recent advances in decentralized optimization, we implemented and tested a distributed MPC approach for the coordinated charging of a large fleet of plug-in electric vehicles. The final implementation enables agents to independently determine their charging profiles while collectively satisfying global power constraints.
     </p>
   </div>
   <div class="inner-box-assets">
@@ -94,22 +91,21 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">simulink</span>
       <span class="tag">aerial robotics</span>
       <span class="tag">backstepping</span>
+      <span class="tag">simulink</span>
     </div>
     <h1>Modeling and control of the Mars helicopter 'Ingenuity'</h1>
     <p>
       <strong>Duration:</strong> Fall 2023 - Spring 2024
     </p>
     <p>
-      Built a detailed Simulink model of Ingenuity in the Martian atmosphere and designed a backstepping controller for
-      trajectory tracking.
+      Our work group developed a detailed dynamic model of <a href="https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/">NASA's Martian helicopter Ingenuity</a>. Building on this, we designed and tested a backstepping control law capable of stabilizing and guiding its flight, accounting for the unique aerodynamic and environmental challenges of Mars.
     </p>
   </div>
   <div class="inner-box-assets">
     <a class="video-thumb" href="https://youtu.be/NaQCXYzuAt4" data-video-id="NaQCXYzuAt4" aria-label="Play video">
-      <img src="https://img.youtube.com/vi/NaQCXYzuAt4/hqdefault.jpg" alt="CNN car control - demo video">
+      <img src="https://img.youtube.com/vi/NaQCXYzuAt4/hqdefault.jpg" alt="Ingenuity - demo video">
       <span class="play-btn" aria-hidden="true"></span>
     </a>
     <div class="project-links">
@@ -124,17 +120,17 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">python</span>
-      <span class="tag">keras</span>
       <span class="tag" data-tooltip="convolutional neural network">CNN</span>
       <span class="tag">image processing</span>
+      <span class="tag">python</span>
+      <span class="tag">keras</span>
     </div>
     <h1>Control of a video-game race car using a convolutional neural network</h1>
     <p>
       <strong>Duration:</strong> Winter 2024
     </p>
     <p>
-      Designed and trained a CNN to control a race car in OpenAI's Car Racing environment using Keras.
+      As part of a machine learning assignment, I designed, trained, and evaluated two CNNs in Keras to classify driving actions from image frames. The project focused on preprocessing, architecture design, regularization, and class reweighting to address data imbalance. The models successfully completed random tracks, demonstrating the strengths and limits of supervised learning in this context.
     </p>
   </div>
   <div class="inner-box-assets">
@@ -154,17 +150,17 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">matlab</span>
-      <span class="tag">c++</span>
       <span class="tag">arduino</span>
       <span class="tag">kalman filter</span>
+      <span class="tag">matlab</span>
+      <span class="tag">c++</span>
     </div>
-    <h1>Self-balancing robot on two wheels</h1>
+    <h1>Self-balancing two-wheeled robot</h1>
     <p>
       <strong>Duration:</strong> Fall 2023 - Winter 2024
     </p>
     <p>
-      Built, modeled, and controlled a two-wheeled robot using Arduino, MPU6050, a Kalman filter, and a PID controller.
+      We built a two-wheeled self-balancing robot from the ground up, managing component selection, 3D printing of mechanical parts, circuit soldering, and system assembly. We then developed the control software, integrating a Kalman filter for improved state estimation.
     </p>
   </div>
   <div class="inner-box-assets">
@@ -184,9 +180,10 @@
 <div class="inner-box content-box">
   <div class="inner-box-text">
     <div class="project-tags">
-      <span class="tag">matlab</span>
-      <span class="tag">arduino</span>
       <span class="tag">signal processing</span>
+      <span class="tag">arduino</span>
+      <span class="tag">matlab</span>
+      <span class="tag">c++</span>
     </div>
     <h1>Signal acquisition through an A/D converter</h1>
     <p>

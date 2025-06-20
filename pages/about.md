@@ -44,3 +44,8 @@ order: 2
 {% endcapture %}
 {{ languages | replace: '    ', ''}}
 </section>
+
+{% capture exams %}
+{% include exams.html %} 
+{% endcapture %}
+{{ exams | replace: '    ', ''}}
