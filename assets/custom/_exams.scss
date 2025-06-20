@@ -5,16 +5,15 @@
   background-color: rgba(0, 0, 0, 0.75);
 
   display: flex;
-  align-items: center;    /* vertical centering */
-  justify-content: center; /* optional: horizontal centering */
-  padding: 1rem; /* prevent overflow on small screens */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .modal-content {
   z-index: 20001;
   background-color: #222;
   color: #eee;
-//   margin: 5% auto;
   padding: 1.5rem 2rem 1.5rem 2rem;
   border-radius: 10px;
   width: 80%;
