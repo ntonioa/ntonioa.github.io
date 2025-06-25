@@ -6,11 +6,11 @@ order: 2
 ---
 
 <section class="content-box">
-<h3 style="text-align: center">In short</h3>
-{% capture in-short %}
-{% include in-short.html %} 
+<h3 style="text-align: center">Profile</h3>
+{% capture profile %}
+{% include profile.html %} 
 {% endcapture %}
-{{ in-short | replace: '    ', ''}}
+{{ profile | replace: '    ', ''}}
 </section>
 
 <section class="content-box" markdown="0">
