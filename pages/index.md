@@ -6,7 +6,7 @@ order: 1
 ---
 
 <section class="content-box">
-<img src="/assets/images/photo.png" alt="Antonio's photo" class="profile-photo">
+<img src="/assets/images/propic.png" alt="Antonio's photo" class="profile-photo">
 <h2 style="text-align: center;">👋🏻Hey, I'm Antonio</h2>
 
 I'm an engineer passionate about **robotics, UAVs, embedded systems and electronics**. 
