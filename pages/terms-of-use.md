@@ -10,7 +10,7 @@ permalink: /terms/
 
 _Last updated: {{ "now" | date: "%B %-d, %Y" }}_
 
-By accessing or using this website (ntonioa.github.io), you agree to these terms.
+By accessing or using this website (r-rapuano.com), you agree to these terms.
 
 <br>
 

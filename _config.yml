@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ntonioa
-email: antonio.rapuano99@gmail.com
-description: Personal website of Antonio Rapuano.
-domain: ntonioa.github.io
-url: https://ntonioa.github.io
+title: r-rapuano.com
+email: schol@r-rapuano.com
+description: Scholar in Robotics.
+domain: r-rapuano.com
+url: https://r-rapuano.com
 # github_username: ntonioa
 # instagram_username: ntonioa
 # linkedin_username: ntonioa
@@ -40,7 +40,7 @@ nav_pages:
     slug: projects
 social_links:
   - name: email
-    url: mailto:antonio.rapuano99@gmail.com
+    url: mailto:schol@r-rapuano.com
     icon: fas fa-envelope
   - name: github
     url: https://github.com/ntonioa

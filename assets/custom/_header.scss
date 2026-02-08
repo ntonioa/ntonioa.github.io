@@ -1,58 +1,80 @@
 .custom-header {
   .nav-container {
-    display:        flex;
+    display: flex;
     justify-content: space-between;
-    align-items:    center;
-    padding:        0.5rem var(--sidebar-offset) 0.5rem var(--sidebar-offset);
-  }
-  .nav-left {
-    display:     flex;
     align-items: center;
+    padding: 0.5rem var(--sidebar-offset) 0.5rem var(--sidebar-offset);
+    flex-wrap: nowrap;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     .brand {
-      font-size:       1.5rem !important;
-      text-transform:  lowercase;
-      color:           $lightergray !important;
+      font-size: 1.5rem !important;
+      text-transform: lowercase;
+      color: $lightergray !important;
       text-decoration: none;
-      margin-right:    0.25rem;
-      margin-left:     0.5rem;
+      margin-right: 0.25rem;
+      margin-left: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: clamp(0.9rem, 4.5vw, 1.5rem) !important;
+      }
     }
+
     .slug {
-      color:        $gray;
-      font-weight:  normal;
-      font-size:    1.5rem;
+      color: $gray;
+      font-weight: normal;
+      font-size: 1.5rem;
+
+      @media (max-width: 768px) {
+        font-size: clamp(0.9rem, 4.5vw, 1.5rem);
+      }
     }
   }
+
   .nav-center {
     @media (max-width: 768px) {
       display: none;
     }
     a {
-      margin:           0 0.75rem;
-      text-decoration:  none;
+      margin: 0 0.75rem;
+      text-decoration: none;
       &.active {
         text-decoration: underline;
       }
     }
   }
+
   .nav-right {
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+
     a {
-      margin-right:       0.75rem;
-      font-size:          1.2rem;
-      color:              $lightergray !important;
-      text-decoration:    none !important;
-      transition:         color 0.2s, transform 0.1s;
+      margin-right: 0.75rem;
+      font-size: 1.2rem;
+      color: $lightergray !important;
+      text-decoration: none !important;
+      transition: color 0.2s, transform 0.1s;
     }
     a:hover {
-      color:             $lightishgray !important;
-      text-decoration:   none !important;
-      transform:         translateY(-2px);
+      color: $lightishgray !important;
+      text-decoration: none !important;
+      transform: translateY(-2px);
     }
   }
 }
 
 .site-header.custom-header {
-  min-height:   auto !important;
-  border-top:    1px solid $darkergray;
+  min-height: auto !important;
+  border-top: 1px solid $darkergray;
   border-bottom: 2px solid $darkergray;
 }
 
