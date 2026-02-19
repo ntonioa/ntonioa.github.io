@@ -21,15 +21,27 @@
     <!-- RIGHT: social icons -->
     <div class="nav-right">
       {% for link in site.social_links %}
+        {% if link.name == "email" %}
+        <a
+          href="#"
+          class="social-link"
+          data-eu="{{ site.email | split: '@' | first }}"
+          data-ed="{{ site.email | split: '@' | last }}"
+          data-tooltip="{{ link.name | upcase }}"
+          rel="noopener"
+        >
+          <i class="fa-regular {{ link.icon }} fa-lg fa-fw"></i>
+        </a>
+        {% else %}
         <a
           href="{{ link.url }}"
           class="social-link"
           data-tooltip="{{ link.name | upcase }}"
           target="_blank" rel="noopener"
         >
-          <!-- <i class="{{ link.icon }}"></i> -->
           <i class="fa-regular {{ link.icon }} fa-lg fa-fw"></i>
         </a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

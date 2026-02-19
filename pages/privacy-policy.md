@@ -42,7 +42,7 @@ Under GDPR/CCPA/other privacy laws, you may:
 - Ask for corrections or deletion of your data.  
 - Opt out of analytics tracking by using your browser’s do-not-track setting.
 
-To exercise any of these rights, please email: [{{ site.email }}](mailto:{{ site.email }}).
+To exercise any of these rights, please email: {% include email-link.html %}.
 
 <br>
 

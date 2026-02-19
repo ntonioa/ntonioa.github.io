@@ -46,6 +46,6 @@ I may revise these terms at any time by updating this page. Continued use of the
 
 ### 6. Contact
 
-If you have any questions about these terms, please email: [{{ site.email }}](mailto:{{ site.email }}).
+If you have any questions about these terms, please email: {% include email-link.html %}.
 
 </section>
