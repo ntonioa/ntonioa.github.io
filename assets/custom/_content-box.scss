@@ -117,16 +117,16 @@
 .button.slim {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.7rem;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   background-color: $darkergray;
   color: $lightergray;
   border-radius: 0.4rem;
 
   i {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
