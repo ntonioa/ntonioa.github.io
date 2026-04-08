@@ -3,6 +3,7 @@ layout: page
 title: about
 permalink: /about/
 order: 2
+description: "Background, experience, education, skills, and languages of Antonio Rapuano — control engineer and robotics researcher."
 ---
 
 <section class="content-box">

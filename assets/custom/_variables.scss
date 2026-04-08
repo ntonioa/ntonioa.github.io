@@ -16,3 +16,14 @@ $white: #fafafa;
   --sidebar-stick-offset:    2rem;
   --sidebar-footer-gap:      3rem;
 }
+
+@mixin custom-scrollbar($direction: vertical) {
+  @if $direction == vertical {
+    &::-webkit-scrollbar { width: 6px; }
+  } @else {
+    &::-webkit-scrollbar { height: 6px; }
+  }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: $gray; border-radius: 4px; }
+  &::-webkit-scrollbar-thumb:hover { background: lighten($gray, 10%); }
+}

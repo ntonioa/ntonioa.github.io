@@ -3,6 +3,7 @@ layout: home
 title: home
 permalink: /
 order: 1
+description: "Personal portfolio of Antonio Rapuano — robotics, UAVs, embedded systems, and control engineering projects."
 ---
 
 <section class="content-box">

@@ -3,6 +3,7 @@ layout: page
 title: projects
 permalink: /projects/
 order: 3
+description: "Theses, academic projects, and personal work in robotics, control systems, UAVs, and embedded electronics by Antonio Rapuano."
 ---
 
 <section class="content-box" markdown="0">
