@@ -46,6 +46,6 @@ I may revise these terms at any time by updating this page. Continued use of the
 
 ### 6. Contact
 
-If you have any questions about these terms, please email: {% include email-link.html %}.
+If you have any questions about these terms, please email: <a href="#" class="email-obf" data-mu="schol" data-md="r-rapuano.com">schol&#64;r&#8209;rapuano.com</a><script>document.currentScript.previousElementSibling.href='mailto:schol@r-rapuano.com';</script>.
 
 </section>

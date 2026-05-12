@@ -40,7 +40,7 @@ Under GDPR/CCPA/other privacy laws, you may:
 - Ask for corrections or deletion of your data.  
 - Opt out of analytics tracking by using your browser’s do-not-track setting.
 
-To exercise any of these rights, please email: {% include email-link.html %}.
+To exercise any of these rights, please email: <a href="#" class="email-obf" data-mu="schol" data-md="r-rapuano.com">schol&#64;r&#8209;rapuano.com</a><script>document.currentScript.previousElementSibling.href='mailto:schol@r-rapuano.com';</script>.
 
 <br>
 
