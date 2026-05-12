@@ -1,83 +1,98 @@
+// --- SITE HEADER -----------------------------------
+// Slim sticky command-bar. Uses backdrop-blur so page content
+// glows faintly behind it when scrolling.
+
 .custom-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba($surface, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-vis;
+  min-height: auto !important;
+
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem var(--sidebar-offset) 0.5rem var(--sidebar-offset);
+    padding: 0 2rem;
+    height: var(--header-height);
     flex-wrap: nowrap;
   }
 
+  // -- Left: monospace breadcrumb path --------------
+
   .nav-left {
     display: flex;
-    align-items: center;
-    flex: 1;
+    align-items: baseline;
+    @include mono;
+    font-size: 0.92rem;
     min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
     .brand {
-      font-size: 1.5rem !important;
-      text-transform: lowercase;
-      color: $lightergray !important;
-      text-decoration: none;
-      margin-right: 0.25rem;
-      margin-left: 0.5rem;
+      color: $accent !important;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: color var(--t);
 
-      @media (max-width: 768px) {
-        font-size: clamp(0.9rem, 4.5vw, 1.5rem) !important;
-      }
+      &:hover { color: lighten($accent, 12%) !important; }
+
+      @media (max-width: 768px) { font-size: 0.82rem; }
+    }
+
+    .brand-ext {
+      color: $text-3;
+      font-weight: 400;
     }
 
     .slug {
-      color: $gray;
-      font-weight: normal;
-      font-size: 1.5rem;
+      color: $text-2;
+      font-weight: 400;
 
-      @media (max-width: 768px) {
-        font-size: clamp(0.9rem, 4.5vw, 1.5rem);
-      }
+      @media (max-width: 768px) { font-size: 0.82rem; }
     }
   }
 
-  .nav-center {
-    @media (max-width: 768px) {
-      display: none;
-    }
-    a {
-      margin: 0 0.75rem;
-      text-decoration: none;
-      &.active {
-        text-decoration: underline;
-      }
-    }
-  }
+  // -- Right: icon strip ----------------------------
 
   .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
     flex-shrink: 0;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 
-    a {
-      margin-right: 0.75rem;
-      font-size: 1.2rem;
-      color: $lightergray !important;
+    a.social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 6px;
+      color: $text-2 !important;
       text-decoration: none !important;
-      transition: color 0.2s, transform 0.1s;
-    }
-    a:hover {
-      color: $lightishgray !important;
-      text-decoration: none !important;
-      transform: translateY(-2px);
+      font-size: 0.88rem;
+      transition: color var(--t), background var(--t);
+
+      &:hover {
+        color: $text-1 !important;
+        background: $card;
+        text-decoration: none !important;
+        transform: none; // override any inherited translateY
+      }
     }
   }
 }
 
 .site-header.custom-header {
   min-height: auto !important;
-  border-top: 1px solid $darkergray;
-  border-bottom: 2px solid $darkergray;
 }
 
+// Keep footer top-border in sync with header bottom-border
 .site-footer {
-  border-top: 2px solid $darkergray;
+  border-top: 1px solid $border-vis;
 }

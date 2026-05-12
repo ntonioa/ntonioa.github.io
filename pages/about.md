@@ -7,7 +7,7 @@ description: "Background, experience, education, skills, and languages of Antoni
 ---
 
 <section class="content-box">
-<h3 style="text-align: center">Profile</h3>
+<div class="section-head"><h3>Profile</h3></div>
 {% capture profile %}
 {% include profile.html %} 
 {% endcapture %}
@@ -15,7 +15,7 @@ description: "Background, experience, education, skills, and languages of Antoni
 </section>
 
 <section class="content-box" markdown="0">
-<h3 style="text-align: center"> Experience </h3>
+<div class="section-head"><h3>Experience</h3></div>
 {% capture experience %}
 {% include experience.html %} 
 {% endcapture %}
@@ -23,7 +23,7 @@ description: "Background, experience, education, skills, and languages of Antoni
 </section>
 
 <section class="content-box">
-<h3 style="text-align: center"> Education </h3>
+<div class="section-head"><h3>Education</h3></div>
 {% capture education %}
 {% include education.html %} 
 {% endcapture %}
@@ -31,7 +31,7 @@ description: "Background, experience, education, skills, and languages of Antoni
 </section>
 
 <section class="content-box">
-<h3 style="text-align: center"> Skills </h3>
+<div class="section-head"><h3>Skills</h3></div>
 {% capture skills %}
 {% include skills.html %} 
 {% endcapture %}
@@ -39,7 +39,7 @@ description: "Background, experience, education, skills, and languages of Antoni
 </section>
 
 <section class="content-box">
-<h3 style="text-align: center"> Languages </h3>
+<div class="section-head"><h3>Languages</h3></div>
 {% capture languages %}
 {% include languages.html %} 
 {% endcapture %}

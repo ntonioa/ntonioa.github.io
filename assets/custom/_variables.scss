@@ -1,29 +1,75 @@
-$blue: #0072BD;
-$orange: #D95319;
-$yellow: #EDB120;
-$violet: #7E2F8E;
-$green: #77AC30;
-$darkgray: #262626;
-$darkergray: #1A1A1A;
-$gray: #808080;
-$lightishgray: #BFBFBF;
-$lightgray: #D0D0D0;
-$lightergray: #F5F5F5;
-$white: #fafafa;
+// --- COLOR PALETTE ---------------------------------
+
+// Backgrounds - deepening the dark from neutral grey to a near-black with
+// a slight indigo undertone, giving the whole site a more intentional feel.
+$bg:          #090910;   // Page background
+$surface:     #0f0f1a;   // Header / sidebar surface
+$card:        #141421;   // Card background
+$card-hi:     #1b1b2e;   // Elevated / focused card
+
+// Accents
+$accent:      #4a8fff;   // Primary electric blue
+$accent-dim:  rgba(74, 143, 255, 0.10);
+$amber:       #e9a835;   // Gold for metadata / dates
+$teal:        #1abfa8;   // Secondary teal
+$green:       #3ecf7a;   // Active / success indicator
+
+// Text hierarchy
+$text-1:      #ecedfa;   // Primary - near-white with slight violet
+$text-2:      #6b6b8d;   // Secondary - muted purple-grey
+$text-3:      #2e2e45;   // Disabled / placeholder
+
+// Structural
+$border:      #161628;   // Hairline border
+$border-vis:  #1e1e34;   // Visible border
+
+// --- LEGACY ALIASES --------------------------------
+// Keep every existing class/include working without touching them.
+
+$orange:       #e05a2b;
+$yellow:       $amber;
+$violet:       #8b5cf6;
+$blue:         $accent;
+$darkgray:     $card;
+$darkergray:   $surface;
+$gray:         $text-2;
+$lightishgray: #9090b0;
+$lightgray:    #9090b8;
+$lightergray:  $text-1;
+$white:        #f0f0fa;
+
+// --- CSS CUSTOM PROPERTIES -------------------------
 
 :root {
-  --sidebar-offset:          15%;
-  --sidebar-stick-offset:    2rem;
-  --sidebar-footer-gap:      3rem;
+  // Legacy - still consumed by _sticky.scss and inline includes
+  --sidebar-offset:       15%;
+  --sidebar-stick-offset: 2rem;
+  --sidebar-footer-gap:   3rem;
+
+  // New layout tokens
+  --sidebar-left:    1.5rem;
+  --sidebar-w:       60px;
+  --content-start:   calc(var(--sidebar-left) + var(--sidebar-w) + 1.5rem);
+  --header-height:   52px;
+
+  // Global design tokens
+  --br:  10px;       // border-radius base
+  --t:   0.18s ease; // transition base
 }
+
+// --- MIXINS ----------------------------------------
 
 @mixin custom-scrollbar($direction: vertical) {
   @if $direction == vertical {
-    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar { width: 5px; }
   } @else {
-    &::-webkit-scrollbar { height: 6px; }
+    &::-webkit-scrollbar { height: 5px; }
   }
   &::-webkit-scrollbar-track { background: transparent; }
-  &::-webkit-scrollbar-thumb { background: $gray; border-radius: 4px; }
-  &::-webkit-scrollbar-thumb:hover { background: lighten($gray, 10%); }
+  &::-webkit-scrollbar-thumb { background: $border-vis; border-radius: 3px; }
+  &::-webkit-scrollbar-thumb:hover { background: $text-3; }
+}
+
+@mixin mono {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
 }

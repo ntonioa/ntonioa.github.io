@@ -1,51 +1,65 @@
+// --- SIDEBAR NAVIGATION RAIL -----------------------
+// Compact pill-shaped rail anchored to the top-left. Active item
+// uses a subtle tinted background + blue text instead of a
+// colour-fill, which reads better at small widths.
+
 .sidebar {
   position: fixed;
-  top: 6rem;
-  left: var(--sidebar-offset);
-  width: 5rem;
-  padding: 1rem;
-  gap: 0.5rem;
+  top: calc(var(--header-height) + 1.25rem);
+  left: var(--sidebar-left);
+  width: var(--sidebar-w);
+  padding: 0.35rem;
   display: flex;
   flex-direction: column;
-  background: $darkergray;
-  border-radius: 1rem;
-  z-index: 1000;
+  gap: 0.2rem;
+  background: $surface;
+  border: 1px solid $border-vis;
+  border-radius: 12px;
+  z-index: 400;
 
   .sidebar-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 4rem;
-    background: $darkgray;
-    border: 1px solid $darkgray;
-    border-radius: 0.5rem;
-    margin: 0.5rem 0;
-    text-decoration: none;
-    color: $lightergray !important;
-    transition: color 0.2s, background 0.2s, transform 0.1s;
+    padding: 0.55rem 0;
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: $text-2 !important;
+    transition: color var(--t), background var(--t), border-color var(--t);
+    border: 1px solid transparent;
+    gap: 0;
 
     &.active {
-      background: lighten($gray, 80%);
-      color: $darkgray !important;
-      transform: none;
+      color: $accent !important;
+      background: $accent-dim;
+      border-color: rgba($accent, 0.22);
+
+      .icon  { color: $accent; }
+      .label { color: $accent; }
+    }
+
+    &:hover:not(.active) {
+      color: $text-1 !important;
+      background: $card;
+      border-color: $border-vis;
+
+      .icon  { color: $text-1; }
+      .label { color: $text-1; }
     }
   }
 
-  .sidebar-btn:hover {
-    color: $darkgray !important;
-    background: lighten($gray, 80%);
-    transform: translateY(-2px);
-  }
-
   .icon {
-    font-size: 1.7rem;
-    margin-top: 0.25rem;
+    font-size: 1rem;
+    color: inherit;
   }
 
   .label {
-    font-size: 1rem;
-    margin-top: 0.25rem;
+    font-size: 0.57rem;
+    margin-top: 0.22rem;
+    @include mono;
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    color: inherit;
   }
 }

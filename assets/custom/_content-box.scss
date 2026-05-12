@@ -1,107 +1,129 @@
+// --- CONTENT BOX -----------------------------------
+// Outer panel. On desktop _sticky.scss overrides margin-left
+// to use --content-start (sidebar left + width + gap).
+
 .content-box {
+  strong, b { color: $text-1; }
 
-  strong,
-  b {
-    color: $lightergray;
-  }
-
-  background: $darkergray;
-  color: $lightgray;
-  padding: 2rem;
-  border-radius: 1rem;
+  background: $card;
+  color: $text-2;
+  padding: 1.75rem;
+  border-radius: 12px;
   position: relative;
   z-index: 1;
-  margin-top: 0.82rem;
-  margin-left: calc(var(--sidebar-offset) + 6rem) !important;
-  margin-right: 0 !important;
-  width: 100% - var(--sidebar-offset) !important;
-  max-width: 1200px;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.content-box+.content-box {
-  margin-top: 2rem;
-}
-
-.content-box h1,
-.content-box h2,
-.content-box h3 {
+  margin-top: 0.75rem;
+  // Fallback margin; _sticky.scss replaces this on desktop
+  margin-left: var(--content-start) !important;
+  margin-right: 2rem !important;
+  max-width: 900px;
+  box-sizing: border-box;
+  border: 1px solid $border-vis;
   text-align: left;
+  text-justify: inter-word;
+  transition: border-color var(--t);
+
+  h1, h2, h3 { text-align: left; }
 }
+
+.content-box + .content-box {
+  margin-top: 1.25rem;
+}
+
+// --- INNER BOX -------------------------------------
+// Item card within a content box. Slightly darker than the outer
+// panel so it reads as an inset element.
 
 .inner-box {
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-left: 0rem !important;
-  margin-right: 0rem !important;
-  margin-bottom: 1rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0.75rem;
   box-sizing: border-box;
-  background: $darkgray;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: 8px;
+  transition: border-color var(--t), transform var(--t), box-shadow var(--t);
+
+  &:last-child { margin-bottom: 0; }
 }
 
 .inner-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: $border-vis;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
-// text
+// --- INNER BOX - TEXT COLUMN -----------------------
 
 .inner-box-text {
   display: flex;
   flex-direction: column;
+  gap: 0.45rem;
   padding: 0;
   justify-content: flex-start;
   align-items: flex-start;
-  text-align: justify;
+  text-align: left;
   width: 100%;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   max-width: 100%;
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    color: $text-1;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: $text-2;
+  }
+
+  // Duration / metadata lines
+  p:has(strong) {
+    font-size: 0.84rem;
+  }
 }
 
-.inner-box-text h3,
-.inner-box-text p {
-  margin: 0;
-}
+// --- PROJECT TAGS ----------------------------------
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0rem 0rem;
-  padding-bottom: 0.5rem;
+  gap: 0.25rem;
+  padding-bottom: 0.4rem;
 }
 
 .tag {
-  background-color: $blue;
-  color: $white;
-  font-size: 0.6rem;
-  padding: 0.2rem 0.6rem;
+  background: $accent-dim;
+  color: $accent;
+  border: 1px solid rgba($accent, 0.22);
+  font-size: 0.65rem;
+  padding: 0.14rem 0.52rem;
   border-radius: 999px;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-weight: 500;
+  letter-spacing: 0.07em;
+  font-weight: 600;
   white-space: nowrap;
-  margin: 0.1rem 0.2rem;
+  @include mono;
 }
 
-// assets
+// --- INNER BOX - ASSET COLUMN ----------------------
 
 .inner-box-assets {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
+  width: 240px;
   max-width: 100%;
-  max-height: 100%;
-  gap: 0rem;
-}
-
-.inner-box-assets .p {
-  padding: 0;
+  flex-shrink: 0;
+  gap: 0;
 }
 
 .project-links {
@@ -109,26 +131,38 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 0.6rem;
-  margin-bottom: 1rem;
-  gap: 0.4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  gap: 0.35rem;
 }
 
+// Slim action button (paper / code / slides)
 .button.slim {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.8rem;
+  gap: 0.35rem;
+  padding: 0.32rem 0.75rem;
+  font-size: 0.76rem;
   line-height: 1.2;
-  background-color: $darkergray;
-  color: $lightergray;
-  border-radius: 0.4rem;
+  background: $card;
+  color: $text-1 !important;
+  border-radius: 6px;
+  border: 1px solid $border-vis;
+  text-decoration: none !important;
+  transition: all var(--t);
+  @include mono;
 
-  i {
-    font-size: 0.9rem;
+  i { font-size: 0.78rem; }
+
+  &:hover {
+    background: $card-hi;
+    border-color: rgba($accent, 0.45);
+    color: $text-1 !important;
+    transform: translateY(-1px);
   }
 }
+
+// --- IMAGE THUMB -----------------------------------
 
 .image-thumb {
   border-radius: 8px;
@@ -137,6 +171,7 @@
   width: 200px;
   max-width: 100%;
   line-height: 0;
-  padding-bottom: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  border: 1px solid $border-vis;
 }

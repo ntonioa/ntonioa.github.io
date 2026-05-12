@@ -1,22 +1,9 @@
 <header class="site-header custom-header">
   <div class="nav-container">
-    <!-- LEFT: dynamic “r-rapuano.com/[slug]” -->
+    <!-- LEFT: monospace breadcrumb — r-rapuano.com/[slug] -->
     <div class="nav-left">
-      <a href="{{ "/" | relative_url }}" class="brand">r-rapuano.com</a>
-      <span class="slug">/{{ page.slug | default: page.title | downcase }}</span>
+      <a href="{{ "/" | relative_url }}" class="brand">r-rapuano</a><span class="brand-ext">.com</span><span class="slug">/{{ page.slug | default: page.title | downcase }}</span>
     </div>
-
-    <!-- CENTER: optional page links (if you want them) -->
-    <!-- <nav class="nav-center">
-      {% for p in site.nav_pages %}
-        <a
-          href="{{ p.url | relative_url }}"
-          class="{% if page.slug == p.slug %}active{% endif %}"
-        >
-          {{ p.title }}
-        </a>
-      {% endfor %}
-    </nav> -->
 
     <!-- RIGHT: social icons -->
     <div class="nav-right">
@@ -30,7 +17,7 @@
           data-tooltip="{{ link.name | upcase }}"
           rel="noopener"
         >
-          <i class="fa-regular {{ link.icon }} fa-lg fa-fw"></i>
+          <i class="{{ link.icon }} fa-fw"></i>
         </a>
         {% else %}
         <a
@@ -39,7 +26,7 @@
           data-tooltip="{{ link.name | upcase }}"
           target="_blank" rel="noopener"
         >
-          <i class="fa-regular {{ link.icon }} fa-lg fa-fw"></i>
+          <i class="{{ link.icon }} fa-fw"></i>
         </a>
         {% endif %}
       {% endfor %}

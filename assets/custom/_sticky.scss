@@ -1,18 +1,23 @@
+// --- DESKTOP STICKY LAYOUT -------------------------
+// On screens wider than 768 px the sidebar becomes sticky
+// (not fixed) so it naturally stops above the footer.
+
 @media (min-width: 769px) {
   .body-wrapper {
-    display:      flex;
-    align-items:  flex-start;
+    display:        flex;
+    align-items:    flex-start;
     padding-bottom: var(--sidebar-footer-gap);
   }
 
   .sidebar {
     position:   sticky;
-    top:        2.6em;
-    margin-top: 2.6em;
+    top:        calc(var(--header-height) + 1.25rem);
+    margin-top: calc(var(--header-height) + 1.25rem);
     bottom:     var(--sidebar-footer-gap);
+    // left and width come from _sidebar.scss
   }
 
   .content-box {
-    margin-left: calc(var(--sidebar-offset) + 4rem);
+    margin-left: var(--content-start);
   }
 }
