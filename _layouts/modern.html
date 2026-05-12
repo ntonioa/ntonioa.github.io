@@ -406,15 +406,17 @@
   const count = document.getElementById('count');
   if (track && prev && next) {
     const cards = Array.from(track.children);
-    const total = cards.length - 1;
-    let i = 0;
+    let total, i = 0;
+    const getTotal = () => window.innerWidth <= 600 ? cards.length : cards.length - 1;
     const update = () => {
+      total = getTotal();
+      i = Math.min(i, total - 1);
       const w = cards[0].getBoundingClientRect().width + 28;
       track.style.transform = `translateX(${-i * w}px)`;
       count.textContent = `${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
     };
-    prev.addEventListener('click', () => { i = (i - 1 + total) % total; update(); });
-    next.addEventListener('click', () => { i = (i + 1) % total; update(); });
+    prev.addEventListener('click', () => { total = getTotal(); i = (i - 1 + total) % total; update(); });
+    next.addEventListener('click', () => { total = getTotal(); i = (i + 1) % total; update(); });
     window.addEventListener('resize', update);
     update();
   }

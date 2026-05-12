@@ -276,10 +276,10 @@ section:last-child { border-bottom: none; }
   margin-bottom: 0;
 }
 .hero-name .l1 { display: block; }
-.hero-name .l2 { display: inline-block; position: relative; }
+.hero-name .l2 { display: inline-block; position: relative; color: var(--accent); }
 .hero-name .l2::after {
   content: ".";
-  color: var(--accent);
+  color: var(--ink);
 }
 .hero-name .arrow {
   display: inline-block;
@@ -688,6 +688,7 @@ section:last-child { border-bottom: none; }
   transition: transform 0.3s ease;
   position: relative;
 }
+.prow:last-child { border-bottom: none; }
 .prow:hover { transform: translateX(14px); }
 .prow .when {
   font-family: var(--mono);
