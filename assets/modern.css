@@ -438,6 +438,7 @@ section:last-child { border-bottom: none; }
 .fcard .img .badge {
   position: absolute;
   top: 14px; left: 14px;
+  z-index: 1;
   background: oklch(0.18 0.012 250 / 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
