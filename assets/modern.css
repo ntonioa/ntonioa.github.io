@@ -735,6 +735,7 @@ section:last-child { border-bottom: none; }
 .prow .kind.acad .swatch { background: oklch(0.74 0.12 220); }
 .prow .kind.pers .swatch { background: var(--good); }
 .prow .kind.preprint .swatch { background: var(--good); }
+.prow .kind.conference .swatch { background: oklch(0.74 0.12 220); }
 .prow .arr {
   font-size: 22px;
   color: var(--mute-2);
